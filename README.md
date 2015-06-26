@@ -1,5 +1,5 @@
-# circle
-Simple Circle Class
+# todo
+Simple Todo List
 
 For this lesson your job is to get the tests to pass by adding the missing code to **lib/task.rb**
 **lib/todo_list.rb**
