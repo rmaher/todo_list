@@ -5,11 +5,15 @@ class Task
 	def initialize(title, priority = 10)
 		self.title = title
         self.priority = priority
+        @completed = false
 	end
 
-    def completed(task)
-        Task.new.completed? == false
-    	
+    def complete
+        @completed = true
+    end
+
+    def complete?
+    	@completed
     end
    
 

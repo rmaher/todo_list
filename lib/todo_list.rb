@@ -1,16 +1,15 @@
 #!/usr/bin/env ruby
 require 'task'
 
-
 class TodoList
 
-	attr_accessor :tasks, :task
+	attr_accessor :tasks
 
 	def initialize
        self.tasks = []
 	end
 
-	def add(tasks)
+	def add(task)
        self.tasks << task
     end
 
