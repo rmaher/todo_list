@@ -1,4 +1,5 @@
 require "spec_helper"
+require 'json'
 
 describe Task do
 	let(:task){ Task.new('Pay bills') }
@@ -24,6 +25,16 @@ describe Task do
 				expect(task.complete?).to be true
 			end
 		end
+	end
+
+	describe "#to_json" do
+		let(:task_to_serialize){ Task.new('Serialize Task', 5) }
+
+		it "serializes the task attributes in to a json object" do
+			parsed_json = JSON.parse(task_to_serialize.to_json)
+			expect(parsed_json) == { title: 'Serialize Task', priority: 5, completed: false }
+		end
+
 	end
 
 end
