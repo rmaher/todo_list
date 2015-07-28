@@ -37,4 +37,18 @@ describe Task do
 
 	end
 
+	describe "#to_s" do
+
+		it "Displays the task's title and priority" do
+			expect(Task.new('Buy Cheese').to_s).to eq("Buy Cheese priority: 10")
+		end
+
+		it "indicates when the task is completed" do
+			task = Task.new('Buy Cheese')
+			task.complete
+			expect(task.to_s).to eq("Buy Cheese priority: 10 --completed!")
+		end
+
+	end
+
 end
